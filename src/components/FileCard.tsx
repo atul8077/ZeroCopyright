@@ -117,7 +117,7 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
 
   if (status === 'done') {
     return (
-      <div className="glass-card" style={{ padding: '4rem 2rem', background: '#11131a', border: '1px solid rgba(255,255,255,0.05)', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}>
+      <div className="glass-card" style={{ padding: '4rem 2rem', background: '#ffffff', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}>
         <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(16, 185, 129, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem' }}>
           <CheckCircle size={40} color="#10b981" />
         </div>
@@ -138,7 +138,7 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
   }
 
   return (
-    <div className="glass-card" style={{ padding: '2.5rem', background: '#11131a', border: '1px solid rgba(255,255,255,0.05)', width: '100%', boxSizing: 'border-box' }}>
+    <div className="glass-card" style={{ padding: '2.5rem', background: '#ffffff', width: '100%', boxSizing: 'border-box' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem' }}>
         <div>
           <h2 style={{ fontSize: '1.75rem', marginBottom: '0.5rem', margin: 0, fontWeight: 700 }}>Processing {fileType}...</h2>
@@ -148,8 +148,8 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
       </div>
       
       {/* Progress Bar */}
-      <div style={{ height: '14px', background: 'rgba(255,255,255,0.05)', borderRadius: '7px', overflow: 'hidden', marginBottom: '3rem' }}>
-        <div style={{ width: `${progress}%`, height: '100%', background: 'linear-gradient(90deg, #3b82f6, #a855f7)', transition: 'width 0.2s linear' }}></div>
+      <div style={{ height: '12px', background: '#f4f4f5', borderRadius: '6px', overflow: 'hidden', marginBottom: '3rem' }}>
+        <div style={{ width: `${progress}%`, height: '100%', background: 'var(--text-primary)', transition: 'width 0.2s linear' }}></div>
       </div>
 
       {/* Steps Grid */}
@@ -163,19 +163,19 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
             <div key={idx} style={{ 
               display: 'flex', alignItems: 'center', gap: '1rem',
               padding: isActive ? '0.8rem 1.2rem' : '0.5rem',
-              background: isActive ? 'rgba(59, 130, 246, 0.05)' : 'transparent',
-              border: isActive ? '1px solid rgba(59, 130, 246, 0.2)' : '1px solid transparent',
+              background: isActive ? '#f4f4f5' : 'transparent',
+              border: isActive ? '1px solid #e4e4e7' : '1px solid transparent',
               borderRadius: '12px',
               transition: 'all 0.3s ease'
             }}>
-              {isCompleted && <CheckCircle size={22} color="#10b981" />}
-              {isActive && <Loader2 size={22} color="#3b82f6" className="animate-spin" />}
-              {isPending && <Circle size={22} color="rgba(255,255,255,0.05)" />}
+              {isCompleted && <CheckCircle size={22} color="var(--success-color)" />}
+              {isActive && <Loader2 size={22} color="var(--text-primary)" className="animate-spin" />}
+              {isPending && <Circle size={22} color="#e4e4e7" />}
               
               <span style={{ 
-                color: isCompleted ? 'var(--text-secondary)' : isActive ? 'var(--text-primary)' : 'rgba(255,255,255,0.2)',
-                fontWeight: isActive ? 600 : 400,
-                fontSize: '1rem'
+                color: isCompleted ? 'var(--text-secondary)' : isActive ? 'var(--text-primary)' : '#a1a1aa',
+                fontWeight: isActive ? 600 : 500,
+                fontSize: '0.95rem'
               }}>
                 {step}
               </span>
