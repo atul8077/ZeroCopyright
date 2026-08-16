@@ -37,8 +37,10 @@ export const Auth: React.FC = () => {
         });
         if (error) throw error;
         
-        // If email confirmation is off, this works immediately
-        navigate('/pricing');
+        // Redirect to Login page upon successful signup
+        setIsLogin(true);
+        setPassword(''); // Clear password field for login
+        alert('Account created successfully! You can now log in.');
       }
     } catch (err: any) {
       setError(err.message || 'Authentication failed');
