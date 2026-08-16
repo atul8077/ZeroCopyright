@@ -24,9 +24,9 @@ export const Pricing: React.FC = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'stretch' }}>
         {/* Free Plan */}
-        <div className="glass-card pricing-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', background: 'rgba(17, 19, 26, 0.8)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '24px' }}>
-          <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(255,255,255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-            <MessageCircle size={26} color="#ffffff" />
+        <div className="glass-card pricing-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(37, 99, 235, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <MessageCircle size={26} color="var(--accent-color)" />
           </div>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 700 }}>Free Plan</h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '40px' }}>Perfect for testing the waters and basic optimizations.</p>
@@ -36,9 +36,9 @@ export const Pricing: React.FC = () => {
           </div>
           
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> 5 files per day</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> Standard processing</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem', color: 'var(--text-secondary)' }}><CheckCircle2 size={18} color="rgba(255,255,255,0.2)" /> No batch processing</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> 5 files per day</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> Standard processing</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem', color: 'var(--text-secondary)' }}><CheckCircle2 size={18} color="var(--card-border)" /> No batch processing</li>
           </ul>
 
           <div style={{ marginTop: 'auto' }}>
@@ -47,10 +47,10 @@ export const Pricing: React.FC = () => {
         </div>
 
         {/* Pro Plan */}
-        <div className="glass-card pricing-card pro-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', background: '#09090b', border: '1px solid rgba(255, 255, 255, 0.2)', borderRadius: '24px', position: 'relative', transform: 'scale(1.03)', zIndex: 10, boxShadow: '0 20px 40px rgba(0,0,0,0.8)' }}>
-          <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: '#ffffff', color: '#000000', padding: '0.35rem 1.25rem', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', boxShadow: '0 4px 10px rgba(255,255,255,0.1)' }}>Most Popular</div>
-          <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-            <Rocket size={26} color="#ffffff" />
+        <div className="glass-card pricing-card pro-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', border: '2px solid var(--accent-color)', position: 'relative', transform: 'scale(1.03)', zIndex: 10, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+          <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-color)', color: '#ffffff', padding: '0.35rem 1.25rem', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', boxShadow: '0 4px 10px rgba(37,99,235,0.2)' }}>Most Popular</div>
+          <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(37, 99, 235, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <Rocket size={26} color="var(--accent-color)" />
           </div>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 700 }}>Pro</h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '40px' }}>Advanced features for regular content creators.</p>
@@ -61,9 +61,9 @@ export const Pricing: React.FC = () => {
           </div>
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> Unlimited files</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> Priority AI processing</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> Batch upload (up to 10)</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> Unlimited files</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> Priority AI processing</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> Batch upload (up to 10)</li>
           </ul>
 
           <div style={{ marginTop: 'auto' }}>
@@ -71,10 +71,10 @@ export const Pricing: React.FC = () => {
           </div>
         </div>
 
-        {/* Creator Pro Plan */}
-        <div className="glass-card pricing-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', background: 'rgba(17, 19, 26, 0.8)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '24px' }}>
-          <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-            <Zap size={26} color="#ffffff" />
+        {/* Creator Pro */}
+        <div className="glass-card pricing-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(16, 185, 129, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <Zap size={26} color="var(--success-color)" />
           </div>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 700 }}>Creator Pro</h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '40px' }}>The ultimate toolkit for professional agencies.</p>
@@ -85,9 +85,9 @@ export const Pricing: React.FC = () => {
           </div>
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> Everything in Pro</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> API Access</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="#ffffff" /> Dedicated support</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> Everything in Pro</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> API Access</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} color="var(--success-color)" /> Dedicated support</li>
           </ul>
 
           <div style={{ marginTop: 'auto' }}>

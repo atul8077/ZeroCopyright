@@ -1,14 +1,14 @@
 :root {
-  --bg-color: #000000;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --accent-color: #ffffff;
-  --accent-gradient: linear-gradient(180deg, #ffffff, #a1a1aa);
-  --success-color: #22c55e;
+  --bg-color: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --accent-color: #2563eb;
+  --accent-gradient: linear-gradient(180deg, #2563eb, #3b82f6);
+  --success-color: #10b981;
   --danger-color: #ef4444;
-  --card-bg: #09090b;
-  --card-border: #27272a;
-  --border-radius: 8px;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --border-radius: 12px;
   --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -43,7 +43,7 @@ body {
   border: 1px solid var(--card-border);
   border-radius: var(--border-radius);
   padding: 1.5rem;
-  box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   transition: var(--transition);
 }
 
@@ -59,15 +59,15 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
+.text-secondary {
+  color: var(--text-secondary);
+}
+
 .text-gradient {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.text-secondary {
-  color: var(--text-secondary);
 }
 
 /* Buttons */
@@ -85,15 +85,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: var(--text-primary);
-  color: var(--bg-color);
-  font-weight: 600;
-  border: 1px solid var(--text-primary);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: var(--text-primary);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
   transform: translateY(-1px);
 }
 
@@ -113,8 +113,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
-  background-color: #0d0f14;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--card-border);
 }
 
 .header-brand {
@@ -132,15 +132,15 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 8px;
-  color: #a5b4fc;
+  color: #2563eb;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .telegram-icon:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(37, 99, 235, 0.15);
 }
 
 .header-nav {
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-nav a {
-  color: #e2e8f0;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -158,15 +158,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-nav a:hover {
-  color: var(--text-primary);
+  color: var(--accent-color);
 }
 
 .btn-login {
   background: var(--text-primary);
-  color: var(--bg-color) !important;
+  color: #ffffff !important;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.95rem;
   border: 1px solid var(--text-primary);
   cursor: pointer;
@@ -175,8 +175,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-login:hover {
-  background: transparent;
-  color: var(--text-primary) !important;
+  background: var(--text-secondary);
+  border-color: var(--text-secondary);
   transform: translateY(-1px);
 }
 
@@ -235,10 +235,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* New Footer Styles */
 .footer {
-  background-color: #0d0f14;
+  background-color: #ffffff;
   padding: 4rem 2rem 2rem;
   margin-top: auto;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid var(--card-border);
 }
 
 .footer-grid {
@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid var(--card-border);
   display: flex;
   justify-content: space-between;
   color: var(--text-secondary);
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
 .input-field {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: rgba(0,0,0,0.2);
+  background: #ffffff;
   border: 1px solid var(--card-border);
   border-radius: var(--border-radius);
   color: var(--text-primary);

@@ -26,8 +26,8 @@ export const Header: React.FC = () => {
         {user ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
               <Link to="/studio" className="btn" style={{ padding: '0.4rem 1rem', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', border: '1px solid rgba(59, 130, 246, 0.2)' }}>Dashboard</Link>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.05)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg-color)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid var(--card-border)' }}>
+                <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'var(--accent-gradient)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', color: '#fff' }}>
                   {(user.user_metadata?.full_name?.[0] || user.email?.[0] || 'U').toUpperCase()}
                 </div>
                 <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)' }}>
