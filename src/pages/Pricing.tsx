@@ -4,8 +4,9 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 export const Pricing: React.FC = () => {
-  const { user } = useAuth();
+  const { user, profile } = useAuth();
   const navigate = useNavigate();
+  const isPro = profile?.subscription_tier === 'pro';
 
   const handlePlanSelection = () => {
     if (!user) {
@@ -67,7 +68,11 @@ export const Pricing: React.FC = () => {
           </ul>
 
           <div style={{ marginTop: 'auto' }}>
-            <button className="btn btn-primary" onClick={handlePlanSelection} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', borderRadius: '12px', fontWeight: 600 }}>Choose Pro</button>
+            {isPro ? (
+              <button className="btn btn-primary" onClick={() => navigate('/studio')} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', borderRadius: '12px', fontWeight: 600, background: 'var(--success-color)', color: '#fff' }}>Open Plan</button>
+            ) : (
+              <button className="btn btn-primary" onClick={handlePlanSelection} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', borderRadius: '12px', fontWeight: 600 }}>Choose Pro</button>
+            )}
           </div>
         </div>
 

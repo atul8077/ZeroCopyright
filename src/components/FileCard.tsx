@@ -87,6 +87,8 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
       
       if (!user) {
         navigate('/auth');
+      } else {
+        navigate('/pricing');
       }
     }
   };

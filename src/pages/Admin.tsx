@@ -23,6 +23,7 @@ export const Admin: React.FC = () => {
         .from('payments')
         .select(`
           id,
+          user_id,
           plan,
           utr_number,
           status,
@@ -82,7 +83,7 @@ export const Admin: React.FC = () => {
     }
   };
 
-  const handleApprove = async (id: string) => {
+  const handleApprove = async (id: string, userId: string) => {
     try {
       // Approve the payment
       const { error: paymentError } = await supabase
@@ -92,11 +93,13 @@ export const Admin: React.FC = () => {
 
       if (paymentError) throw paymentError;
 
-      // In a real app, also update the user's profile subscription_tier here if needed
-      // await supabase.from('profiles').update({ subscription_tier: 'pro' }).eq('id', userId);
+      // Update the user's profile subscription_tier
+      if (userId) {
+        await supabase.from('profiles').update({ subscription_tier: 'pro', subscription_status: 'active' }).eq('id', userId);
+      }
 
       setPayments(prev => prev.map(p => p.id === id ? { ...p, status: 'approved' } : p));
-      alert(`Payment approved successfully!`);
+      alert(`Payment approved successfully! User plan is now active.`);
     } catch (err: any) {
       alert('Error approving payment: ' + err.message);
     }
@@ -176,7 +179,7 @@ export const Admin: React.FC = () => {
                   </td>
                   <td style={{ padding: '1rem 0.5rem', textAlign: 'right' }}>
                     {p.status === 'pending' && (
-                      <button onClick={() => handleApprove(p.id)} className="btn btn-primary" style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', borderRadius: '6px' }}>
+                      <button onClick={() => handleApprove(p.id, p.user_id)} className="btn btn-primary" style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', borderRadius: '6px' }}>
                         <CheckCircle size={14} /> Approve
                       </button>
                     )}
