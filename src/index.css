@@ -1,15 +1,15 @@
-﻿:root {
-  --bg-color: #0A0A0B;
-  --text-primary: #FFFFFF;
-  --text-secondary: #9CA3AF;
-  --accent-color: #6366f1;
-  --accent-gradient: linear-gradient(135deg, #6366f1, #9333ea);
-  --success-color: #10b981;
+:root {
+  --bg-color: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent-color: #ffffff;
+  --accent-gradient: linear-gradient(180deg, #ffffff, #a1a1aa);
+  --success-color: #22c55e;
   --danger-color: #ef4444;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --border-radius: 12px;
-  --transition: all 0.3s ease;
+  --card-bg: #09090b;
+  --card-border: #27272a;
+  --border-radius: 8px;
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -37,15 +37,13 @@ body {
   flex-grow: 1;
 }
 
-/* Glassmorphism Card */
+/* Clean Card */
 .glass-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--border-radius);
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.5);
   transition: var(--transition);
 }
 
@@ -87,13 +85,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
-  color: white;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  background: var(--text-primary);
+  color: var(--bg-color);
+  font-weight: 600;
+  border: 1px solid var(--text-primary);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  background: transparent;
+  color: var(--text-primary);
   transform: translateY(-1px);
 }
 
@@ -162,21 +162,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-login {
-  background: linear-gradient(135deg, #4f46e5, #9333ea);
-  color: white !important;
+  background: var(--text-primary);
+  color: var(--bg-color) !important;
   padding: 0.5rem 1.5rem;
-  border-radius: 24px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
-  border: none;
+  border: 1px solid var(--text-primary);
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
 }
 
 .btn-login:hover {
+  background: transparent;
+  color: var(--text-primary) !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
 }
 
 /* File Grid */

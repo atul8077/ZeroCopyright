@@ -5,6 +5,7 @@ import { Pricing } from './pages/Pricing';
 import { Contact } from './pages/Contact';
 import { FAQ, Privacy, Terms, Refund, Disclaimer } from './pages/Legal';
 import { Auth } from './pages/Auth';
+import { Checkout } from './pages/Checkout';
 import { Header } from './components/Header';
 import ScrollToTop from './components/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Studio />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
