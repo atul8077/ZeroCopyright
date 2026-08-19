@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp, Zap, Globe, Shield, Activity, Search } from 'lu
 const faqs = [
   {
     id: 1,
-    question: "How does Copyright Remover work?",
+    question: "How does ZeroCopyright work?",
     answer: "This tool only provides a demonstration of real processes and does not actually modify any video. It is intended purely for illustrative purposes. It does not change the video, remove copyright, or edit metadata in any way. The “simulation algorithms” simply show how such processes might work in practice, without performing any real actions. Techniques like perceptual hashing are demonstrated only to explain how videos can be identified or analyzed for similarity—they are not applied to alter the content. In short, this tool is meant to help users understand how video optimization works, but it does not make any actual changes on its own. Our platform charges a subscription only for access to this simulation and demonstration, not for removing copyright or modifying videos.",
     icon: <Zap size={20} color="#6366f1" />
   },
@@ -24,7 +24,7 @@ const faqs = [
   {
     id: 4,
     question: "Can I earn from these videos?",
-    answer: "The “copyright remover” does not guarantee whether you will earn revenue or not. It only provides a simulation of possible outcomes, and the subscription fee is charged for access to that simulation.",
+    answer: "The “ZeroCopyright” does not guarantee whether you will earn revenue or not. It only provides a simulation of possible outcomes, and the subscription fee is charged for access to that simulation.",
     icon: <Activity size={20} color="#f59e0b" />
   },
   {
@@ -128,10 +128,10 @@ export const Terms: React.FC = () => (
         <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2024</p>
 
         <h3>1. Acceptance of Terms</h3>
-        <p>By using Copyright Remover, you agree to these terms. If you do not agree, do not use our services. We provide an AI-based video processing tool "as is".</p>
+        <p>By using ZeroCopyright, you agree to these terms. If you do not agree, do not use our services. We provide an AI-based video processing tool "as is".</p>
 
         <h3>2. User Responsibilities & Risk</h3>
-        <p>This is only a simulation that shows how things work. Dont think this is a copyright remover too, This is a simulation only. if you simulate the video from here and upload the video on YouTube, Facebook, Instagram, or any other social media platform it is entirely your responsibility. If your video receives any copyright claim or any action is taken against it, you will be solely responsible for it. use this tool only for fun and see the simulation, dont think this is real copyright remover tool. if you think this is real tool and upload on any social media and your video or your account will be ban or suspended this is your responsibility.</p>
+        <p>This is only a simulation that shows how things work. Dont think this is a ZeroCopyright too, This is a simulation only. if you simulate the video from here and upload the video on YouTube, Facebook, Instagram, or any other social media platform it is entirely your responsibility. If your video receives any copyright claim or any action is taken against it, you will be solely responsible for it. use this tool only for fun and see the simulation, dont think this is real ZeroCopyright tool. if you think this is real tool and upload on any social media and your video or your account will be ban or suspended this is your responsibility.</p>
 
         <h3>3. No Liability for Account Bans</h3>
         <p>If you upload videos simulate by our tool and upload to YouTube, Instagram, Facebook, or any other platform and your account gets suspended, banned, or receives a copyright strike, WE ARE NOT RESPONSIBLE. We hold zero liability for your actions, because we clearly mention this is a simulation tool and shows how the thing does work.</p>
@@ -154,7 +154,7 @@ export const Refund: React.FC = () => (
         <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2024</p>
 
         <h3>Strict No-Refund Policy</h3>
-        <p>Copyright Remover provides a digital utility service in the form of a subscription access pass. <strong>ALL SALES ARE FINAL. WE DO NOT OFFER REFUNDS.</strong></p>
+        <p>ZeroCopyright provides a digital utility service in the form of a subscription access pass. <strong>ALL SALES ARE FINAL. WE DO NOT OFFER REFUNDS.</strong></p>
 
         <h3>Failed Transactions</h3>
         <p>If your money is deducted from your bank account but the pass is not activated due to a technical error, the amount will automatically be refunded by your bank/UPI provider within 3-5 business days. Our system does not capture funds for failed API calls.</p>
@@ -177,15 +177,15 @@ export const Disclaimer: React.FC = () => (
         <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2026</p>
 
         <h3>Zero Responsibility Policy</h3>
-        <p>"Copyright REMOVER TAKES ZERO RESPONSIBILITY FOR HOW YOU USE THIS SIMULATION TOOL. USE IT FOR ONLY FUN AND UNDERSTAND THE SIMULATION. DONT THINK THIS IS REAL"</p>
+        <p>"ZeroCopyright TAKES ZERO RESPONSIBILITY FOR HOW YOU USE THIS SIMULATION TOOL. USE IT FOR ONLY FUN AND UNDERSTAND THE SIMULATION. DONT THINK THIS IS REAL"</p>
 
-        <p>The Copyright Remover Simulation tool is designed strictly for educational, testing and simulation purpose only and personal archiving purposes. We do not host, store, or distribute copyrighted content, this is simulation tool.</p>
+        <p>The ZeroCopyright Simulation tool is designed strictly for educational, testing and simulation purpose only and personal archiving purposes. We do not host, store, or distribute copyrighted content, this is simulation tool.</p>
 
         <h3>Content Ownership</h3>
         <p>By processing a video through our servers, you explicitly state that you are the original creator of the content or have obtained the necessary legal permissions from the copyright holder, this is a simulation tool that shows how the things work. if you are a original owner of the content so you can upload the video on youtube.</p>
 
         <h3>Anti-Misuse Guidelines</h3>
-        <p>Any misuse of this tool to bypass DRM, remove legitimate watermarks, or steal intellectual property is strictly against our guidelines. If you face legal action, financial penalties, or platform bans, Copyright Remover, its founders, and its servers cannot be held liable under any circumstances. because this is a simulation tool and we are not responsible for how you use this tool, we are just providing a tool that shows how the things work. and not a real copyright remover tool. and we charge for showing this simulation to you.</p>
+        <p>Any misuse of this tool to bypass DRM, remove legitimate watermarks, or steal intellectual property is strictly against our guidelines. If you face legal action, financial penalties, or platform bans, ZeroCopyright, its founders, and its servers cannot be held liable under any circumstances. because this is a simulation tool and we are not responsible for how you use this tool, we are just providing a tool that shows how the things work. and not a real ZeroCopyright tool. and we charge for showing this simulation to you.</p>
 
         <h3>Disclaimer of Use</h3>
         <p>By continuing to use this site, you accept all terms of this disclaimer.</p>
