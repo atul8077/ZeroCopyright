@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Studio } from './pages/Studio';
 import { Admin } from './pages/Admin';
 import { Pricing } from './pages/Pricing';
@@ -12,25 +12,15 @@ import { AuthProvider } from './context/AuthContext';
 import { Shield, Mail, Zap, Info } from 'lucide-react';
 import './App.css';
 
-function App() {
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith('/admin');
+
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Studio />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/refund" element={<Refund />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-        </Routes>
+    <>
+      {!isAdmin && <Header />}
+      {children}
+      {!isAdmin && (
         <footer className="footer">
           <div className="footer-grid">
             <div className="footer-col">
@@ -75,6 +65,31 @@ function App() {
             <div style={{ fontStyle: 'italic', opacity: 0.7 }}>"This tool is for privacy optimization only."</div>
           </div>
         </footer>
+      )}
+    </>
+  );
+};
+
+function App() {
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Studio />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/refund" element={<Refund />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </AuthProvider>
   );
