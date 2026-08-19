@@ -29,8 +29,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <span style={{ color: '#a5b4fc' }}>ZeroCopyright</span>
               </Link>
               <p>
-                The world's most advanced privacy-first metadata optimization platform. 
-                Trusted by content creators worldwide for secure, client-side scrubbing.
+                The world's most advanced simulation-based video optimization platform. 
+                Trusted by content creators worldwide for processing simulations.
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)' }}>
                 <Mail size={18} color="#4f46e5" /> support@zerocopyright.com

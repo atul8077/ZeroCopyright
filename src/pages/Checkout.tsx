@@ -55,11 +55,17 @@ export const Checkout: React.FC = () => {
           <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(16, 185, 129, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
             <CheckCircle2 size={32} color="#10b981" />
           </div>
-          <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Payment Submitted!</h2>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.6' }}>
-            Thank you! Your UTR number <strong>{utr}</strong> has been received. Our admins will verify the payment shortly and activate your subscription.
-          </p>
-          <button className="btn btn-primary" onClick={() => navigate('/')}>Return to Dashboard</button>
+          <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Payment Initiated</h2>
+          <div style={{ background: '#0f172a', padding: '1.5rem', borderRadius: '12px', textAlign: 'left', marginBottom: '2rem' }}>
+            <h3 style={{ color: '#60a5fa', marginBottom: '1rem', fontSize: '1.1rem' }}>What happens next?</h3>
+            <p style={{ color: '#94a3b8', marginBottom: '1rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
+              We have received your request. Your payment is currently under review by our admin team.
+            </p>
+            <p style={{ color: '#94a3b8', lineHeight: '1.6', fontSize: '0.95rem' }}>
+              Once verified, your plan will be activated automatically. This usually takes a few minutes but can take up to 1 hours.
+            </p>
+          </div>
+          <button className="btn btn-primary" onClick={() => navigate('/')} style={{ width: '100%', background: '#ffffff', color: '#000000' }}>Go to Dashboard &rarr;</button>
         </div>
       </main>
     );
