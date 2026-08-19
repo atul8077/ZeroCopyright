@@ -97,7 +97,7 @@ export const Privacy: React.FC = () => (
     title="Privacy Policy" 
     content={
       <>
-        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2024</p>
+        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: August 2026</p>
         
         <h3>What Data We Collect</h3>
         <p>We collect minimal data required to run our SaaS platform:</p>
@@ -125,7 +125,7 @@ export const Terms: React.FC = () => (
     title="Terms of Service" 
     content={
       <>
-        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2024</p>
+        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: August 2026</p>
 
         <h3>1. Acceptance of Terms</h3>
         <p>By using ZeroCopyright, you agree to these terms. If you do not agree, do not use our services. We provide an AI-based video processing tool "as is".</p>
@@ -151,7 +151,7 @@ export const Refund: React.FC = () => (
     title="Refund Policy" 
     content={
       <>
-        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2024</p>
+        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: August 2026</p>
 
         <h3>Strict No-Refund Policy</h3>
         <p>ZeroCopyright provides a digital utility service in the form of a subscription access pass. <strong>ALL SALES ARE FINAL. WE DO NOT OFFER REFUNDS.</strong></p>
@@ -174,7 +174,7 @@ export const Disclaimer: React.FC = () => (
     title="Fair Use Disclaimer" 
     content={
       <>
-        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: April 2026</p>
+        <p className="text-secondary" style={{ marginBottom: '2rem' }}>Last Updated: August 2026</p>
 
         <h3>Zero Responsibility Policy</h3>
         <p>"ZeroCopyright TAKES ZERO RESPONSIBILITY FOR HOW YOU USE THIS SIMULATION TOOL. USE IT FOR ONLY FUN AND UNDERSTAND THE SIMULATION. DONT THINK THIS IS REAL"</p>
