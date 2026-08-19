@@ -62,7 +62,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           
           <div className="footer-bottom">
             <div>© 2026 ZeroCopyright. All rights reserved.</div>
-            <div style={{ fontStyle: 'italic', opacity: 0.7 }}>"This tool is for privacy optimization only."</div>
+            <div style={{ fontStyle: 'italic', opacity: 0.7 }}>"This tool is for content optimization simulation only. We do not promote or support copyright infringement."</div>
           </div>
         </footer>
       )}
