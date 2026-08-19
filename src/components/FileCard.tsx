@@ -24,7 +24,7 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
   const [progress, setProgress] = useState(0);
   const [cleanedUrl, setCleanedUrl] = useState<string | null>(null);
   
-  const { user } = useAuth();
+  const { user, profile } = useAuth();
   const navigate = useNavigate();
 
   const isImage = file.type.startsWith('image/');
@@ -77,6 +77,18 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
   };
 
   const handleDownload = () => {
+    if (!user) {
+      navigate('/auth');
+      return;
+    }
+
+    // Check if the user has an active subscription
+    if (profile?.subscription_status !== 'active') {
+      alert('Please purchase a subscription plan to download files!');
+      navigate('/pricing');
+      return;
+    }
+
     if (cleanedUrl) {
       const a = document.createElement('a');
       a.href = cleanedUrl;
@@ -84,12 +96,6 @@ export const FileCard: React.FC<FileCardProps> = ({ file, onRemove }) => {
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      
-      if (!user) {
-        navigate('/auth');
-      } else {
-        navigate('/pricing');
-      }
     }
   };
 
