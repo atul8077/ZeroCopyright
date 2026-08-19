@@ -33,7 +33,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 Trusted by content creators worldwide for processing simulations.
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)' }}>
-                <Mail size={18} color="#4f46e5" /> support@zerocopyright.com
+                <Mail size={18} color="#4f46e5" /> zerocopyright7@gmail.com
               </div>
             </div>
             

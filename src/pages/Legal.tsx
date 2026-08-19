@@ -114,7 +114,7 @@ export const Privacy: React.FC = () => (
         <p>We use secure third-party payment gateways to process transactions and Telegram APIs for internal system logging. These services have their own privacy policies which we encourage you to review.</p>
 
         <h3>Questions about your data?</h3>
-        <p>Reach out to us at copyrightremover7@gmail.com for any data-related queries.</p>
+        <p>Reach out to us at zerocopyright7@gmail.com for any data-related queries.</p>
       </>
     } 
   />

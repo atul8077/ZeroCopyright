@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
             <Mail size={24} color="#8b5cf6" />
           </div>
           <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Email</h3>
-          <p className="text-secondary" style={{ fontSize: '1rem', wordBreak: 'break-all' }}>copyrightremover7@gmail.com</p>
+          <p className="text-secondary" style={{ fontSize: '1rem', wordBreak: 'break-all' }}>zerocopyright7@gmail.com</p>
         </div>
 
         {/* Address Card */}
