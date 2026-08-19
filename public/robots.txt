@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zero-copyright.vercel.app/sitemap.xml
