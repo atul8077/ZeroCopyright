@@ -43,7 +43,7 @@ export const Pricing: React.FC = () => {
           </ul>
 
           <div style={{ marginTop: 'auto' }}>
-            <button className="btn" onClick={handlePlanSelection} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', borderRadius: '12px', fontWeight: 600 }}>Get Started</button>
+            <button className="btn btn-secondary" onClick={handlePlanSelection} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', borderRadius: '12px', fontWeight: 600 }}>Get Started</button>
           </div>
         </div>
 
@@ -96,7 +96,7 @@ export const Pricing: React.FC = () => {
           </ul>
 
           <div style={{ marginTop: 'auto' }}>
-            <button className="btn" onClick={handlePlanSelection} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', borderRadius: '12px', fontWeight: 600 }}>Choose Creator Pro</button>
+            <button className="btn btn-secondary" onClick={handlePlanSelection} style={{ width: '100%', padding: '0.875rem', fontSize: '1rem', borderRadius: '12px', fontWeight: 600 }}>Choose Creator Pro</button>
           </div>
         </div>
       </div>
