@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --bg-color: #fafafa;
-  --text-primary: #09090b;
-  --text-secondary: #52525b;
-  --accent-color: #000000;
-  --accent-gradient: linear-gradient(135deg, #09090b 0%, #3f3f46 100%);
+  --bg-color: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-color: #2563eb;
+  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
   --success-color: #10b981;
   --danger-color: #ef4444;
   --card-bg: #ffffff;
-  --card-border: #e4e4e7;
+  --card-border: #e2e8f0;
   --border-radius: 20px;
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: var(--text-primary);
 }
 
 .text-secondary {
@@ -104,19 +104,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: var(--text-primary);
+  background: var(--accent-gradient);
   color: #ffffff;
   font-weight: 600;
   border: none;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   letter-spacing: -0.01em;
 }
 
 .btn-primary:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
   transform: translateY(-2px);
-  background: #000000;
+  background: linear-gradient(135deg, #1d4ed8 0%, #059669 100%);
 }
 
 .btn-secondary {
@@ -193,13 +193,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-login {
-  background: var(--text-primary);
+  background: var(--accent-gradient);
   color: #ffffff !important;
   padding: 0.6rem 1.75rem;
   border-radius: 12px;
   font-weight: 600;
   font-size: 0.95rem;
-  border: 1px solid var(--text-primary);
+  border: none;
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
@@ -207,10 +207,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-login:hover {
-  background: transparent;
-  color: var(--text-primary) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 /* File Grid */

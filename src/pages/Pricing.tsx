@@ -49,7 +49,7 @@ export const Pricing: React.FC = () => {
 
         {/* Pro Plan */}
         <div className="glass-card pricing-card pro-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', border: '2px solid var(--accent-color)', position: 'relative', transform: 'scale(1.03)', zIndex: 10, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-          <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-color)', color: '#ffffff', padding: '0.35rem 1.25rem', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', boxShadow: '0 4px 10px rgba(37,99,235,0.2)' }}>Most Popular</div>
+          <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-gradient)', color: '#ffffff', padding: '0.35rem 1.25rem', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', boxShadow: '0 4px 10px rgba(37,99,235,0.2)' }}>Most Popular</div>
           <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(37, 99, 235, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
             <Rocket size={26} color="var(--accent-color)" />
           </div>

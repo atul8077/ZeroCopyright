@@ -29,15 +29,15 @@ export const Studio: React.FC = () => {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.03)', padding: '0.5rem 1.25rem', borderRadius: '30px' }}>
           <div style={{ display: 'flex', marginLeft: '0.5rem' }}>
-            <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#000000', marginLeft: '-0.75rem', border: '2px solid #ffffff' }}></div>
-            <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#3f3f46', marginLeft: '-0.75rem', border: '2px solid #ffffff' }}></div>
-            <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#71717a', marginLeft: '-0.75rem', border: '2px solid #ffffff' }}></div>
+            <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#2563eb', marginLeft: '-0.75rem', border: '2px solid #ffffff' }}></div>
+            <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#10b981', marginLeft: '-0.75rem', border: '2px solid #ffffff' }}></div>
+            <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#059669', marginLeft: '-0.75rem', border: '2px solid #ffffff' }}></div>
           </div>
           <span style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500 }}>20k+ Trusted Users</span>
         </div>
         <div style={{ color: 'rgba(255,255,255,0.2)', fontSize: '1.2rem' }}>•</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <PlayCircle size={20} color="#000000" />
+          <PlayCircle size={20} color="#2563eb" />
           <span style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500 }}>50k+ Media Processed</span>
         </div>
         <div style={{ color: 'rgba(255,255,255,0.2)', fontSize: '1.2rem' }}>•</div>
@@ -77,8 +77,8 @@ export const Studio: React.FC = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
           {/* Audio Upload */}
           <div className="glass-card" style={{ textAlign: 'center', padding: '3rem 2rem', cursor: 'pointer' }} onClick={() => audioRef.current?.click()}>
-            <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#f4f4f5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', transition: 'all 0.3s ease' }}>
-              <Music size={32} color="#000000" />
+            <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(37, 99, 235, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', transition: 'all 0.3s ease' }}>
+              <Music size={32} color="#2563eb" />
             </div>
             <h3 style={{ marginBottom: '0.5rem' }}>Clean Audio</h3>
             <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>MP3, WAV, M4A</p>
@@ -88,8 +88,8 @@ export const Studio: React.FC = () => {
 
           {/* Video Upload */}
           <div className="glass-card" style={{ textAlign: 'center', padding: '3rem 2rem', cursor: 'pointer' }} onClick={() => videoRef.current?.click()}>
-            <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#f4f4f5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', transition: 'all 0.3s ease' }}>
-              <Video size={32} color="#000000" />
+            <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(239, 68, 68, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', transition: 'all 0.3s ease' }}>
+              <Video size={32} color="#ef4444" />
             </div>
             <h3 style={{ marginBottom: '0.5rem' }}>Clean Video</h3>
             <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>MP4, WEBM, MOV</p>
@@ -99,8 +99,8 @@ export const Studio: React.FC = () => {
 
           {/* Image Upload */}
           <div className="glass-card" style={{ textAlign: 'center', padding: '3rem 2rem', cursor: 'pointer' }} onClick={() => imageRef.current?.click()}>
-            <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#f4f4f5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', transition: 'all 0.3s ease' }}>
-              <ImageIcon size={32} color="#000000" />
+            <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(16, 185, 129, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', transition: 'all 0.3s ease' }}>
+              <ImageIcon size={32} color="#10b981" />
             </div>
             <h3 style={{ marginBottom: '0.5rem' }}>Clean Image</h3>
             <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>JPG, PNG, WEBP</p>
