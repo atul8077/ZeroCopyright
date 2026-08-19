@@ -59,3 +59,20 @@ CREATE POLICY "Public Update for Admin" ON public.payments FOR UPDATE USING (tru
 CREATE POLICY "Public Delete for Admin" ON public.payments FOR DELETE USING (true);
 
 CREATE POLICY "Public Update Profile for Admin" ON public.profiles FOR UPDATE USING (true);
+
+-- 3. Create Queries Table (for Contact Us page)
+CREATE TABLE public.queries (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  message TEXT NOT NULL,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+ALTER TABLE public.queries ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Anyone can insert queries" ON public.queries FOR INSERT WITH CHECK (true);
+CREATE POLICY "Public Read for Admin Queries" ON public.queries FOR SELECT USING (true);
+CREATE POLICY "Public Update for Admin Queries" ON public.queries FOR UPDATE USING (true);
+CREATE POLICY "Public Delete for Admin Queries" ON public.queries FOR DELETE USING (true);
+
