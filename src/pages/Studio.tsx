@@ -64,11 +64,11 @@ export const Studio: React.FC = () => {
           }}>
             <Zap size={16} /> New AI Engine 2.0 Live
           </div>
-          <h1 style={{ fontSize: '5rem', lineHeight: '1.1', marginBottom: '1.5rem', fontWeight: 800 }}>
+          <h1 className="hero-title" style={{ lineHeight: '1.1', marginBottom: '1.5rem', fontWeight: 800 }}>
             ZeroCopyright <br/>
             <span className="text-gradient">Scrubbing Instantly</span>
           </h1>
-          <p className="text-secondary" style={{ fontSize: '1.15rem', maxWidth: '750px', margin: '0 auto', lineHeight: '1.6' }}>
+          <p className="text-secondary hero-subtitle" style={{ maxWidth: '750px', margin: '0 auto', lineHeight: '1.6' }}>
             ZeroCopyright - Professional AI deep-clean technology. Upload your media below to simulate advanced privacy optimization.
           </p>
         </div>
