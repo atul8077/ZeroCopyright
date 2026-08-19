@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Studio } from './pages/Studio';
 import { Admin } from './pages/Admin';
 import { Pricing } from './pages/Pricing';
@@ -14,7 +15,21 @@ import './App.css';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isAdmin = location.pathname.startsWith('/admin');
+  const [footerClickCount, setFooterClickCount] = useState(0);
+
+  const handleFooterBrandClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const newCount = footerClickCount + 1;
+    setFooterClickCount(newCount);
+    if (newCount >= 5) {
+      setFooterClickCount(0);
+      navigate('/admin');
+    } else {
+      navigate('/');
+    }
+  };
 
   return (
     <>
@@ -24,10 +39,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <footer className="footer">
           <div className="footer-grid">
             <div className="footer-col">
-              <Link to="/" className="header-brand" style={{ marginBottom: '1rem', textDecoration: 'none' }}>
+              <a href="/" onClick={handleFooterBrandClick} className="header-brand" style={{ marginBottom: '1rem', textDecoration: 'none', cursor: 'pointer', userSelect: 'none' }}>
                 <Shield style={{ color: '#4f46e5' }} size={28} />
                 <span style={{ color: '#a5b4fc' }}>ZeroCopyright</span>
-              </Link>
+              </a>
               <p>
                 The world's most advanced simulation-based video optimization platform. 
                 Trusted by content creators worldwide for processing simulations.
@@ -45,7 +60,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li><Link to="/faq">FAQ</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
                 <li><Link to="/auth">Login / Sign Up</Link></li>
-                <li><Link to="/admin">Admin Panel</Link></li>
               </ul>
             </div>
 

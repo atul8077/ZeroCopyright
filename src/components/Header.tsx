@@ -6,14 +6,28 @@ import { useAuth } from '../context/AuthContext';
 export const Header: React.FC = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const [clickCount, setClickCount] = React.useState(0);
+
+  const handleBrandClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+    
+    if (newCount >= 5) {
+      setClickCount(0);
+      navigate('/admin');
+    } else {
+      navigate('/');
+    }
+  };
 
   return (
     <header className="header">
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        <Link to="/" className="header-brand" style={{ textDecoration: 'none' }}>
+        <a href="/" onClick={handleBrandClick} className="header-brand" style={{ textDecoration: 'none', cursor: 'pointer' }}>
           <Shield style={{ color: '#4f46e5' }} size={32} />
-          <span style={{ color: '#a5b4fc', fontSize: '1.5rem' }}>ZeroCopyright</span>
-        </Link>
+          <span style={{ color: '#a5b4fc', fontSize: '1.5rem', userSelect: 'none' }}>ZeroCopyright</span>
+        </a>
         <div className="telegram-icon">
           <Send size={14} />
         </div>
