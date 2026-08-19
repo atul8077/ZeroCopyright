@@ -66,10 +66,10 @@ export const Studio: React.FC = () => {
           </div>
           <h1 className="hero-title" style={{ lineHeight: '1.1', marginBottom: '1.5rem', fontWeight: 800 }}>
             ZeroCopyright <br/>
-            <span className="text-gradient">Scrubbing Instantly</span>
+            <span className="text-gradient">Simulation Instantly</span>
           </h1>
           <p className="text-secondary hero-subtitle" style={{ maxWidth: '750px', margin: '0 auto', lineHeight: '1.6' }}>
-            ZeroCopyright - Professional AI deep-clean technology. Upload your media below to simulate advanced privacy optimization.
+            ZeroCopyright - Professional AI deep-clean technology. Upload your video below to simulate advanced content optimization.
           </p>
         </div>
 
