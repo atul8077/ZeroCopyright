@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { QrCode, CheckCircle2, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabaseClient';
 import { useAuth } from '../context/AuthContext';
 
@@ -10,7 +10,10 @@ export const Checkout: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
   const { user } = useAuth();
+  
+  const selectedPlan = location.state?.plan || 'Pro';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +30,7 @@ export const Checkout: React.FC = () => {
         const { error: dbError } = await supabase.from('payments').insert([
           {
             user_id: user.id,
-            plan: 'Pro', // Can be made dynamic later
+            plan: selectedPlan,
             utr_number: utr,
             status: 'pending'
           }
@@ -76,7 +79,7 @@ export const Checkout: React.FC = () => {
       <div className="glass-card" style={{ width: '100%', maxWidth: '450px', padding: '2.5rem' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.75rem' }}>Complete Payment</h2>
         <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-          Please scan the QR code or use the UPI ID below to make your payment.
+          You have selected the <strong>{selectedPlan}</strong> plan. Please scan the QR code or use the UPI ID below to make your payment.
         </p>
         
         {error && (

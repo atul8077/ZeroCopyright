@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { FileCard } from '../components/FileCard';
 import { Image as ImageIcon, Video, Music, PlayCircle, Star, Zap } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 export const Studio: React.FC = () => {
   const [files, setFiles] = useState<File[]>([]);
+  const { profile } = useAuth();
   
   const audioRef = useRef<HTMLInputElement>(null);
   const videoRef = useRef<HTMLInputElement>(null);
@@ -56,13 +58,24 @@ export const Studio: React.FC = () => {
       <main className="container">
         {/* Hero Section */}
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <div style={{ 
-            display: 'inline-flex', alignItems: 'center', gap: '0.5rem', 
-            background: '#f4f4f5', border: '1px solid #e4e4e7', 
-            padding: '0.6rem 1.25rem', borderRadius: '24px', color: '#09090b', fontSize: '0.9rem', fontWeight: 600,
-            marginBottom: '2rem'
-          }}>
-            <Zap size={16} /> New AI Engine 2.0 Live
+          <div style={{ marginBottom: '2rem' }}>
+            <div style={{ 
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem', 
+              background: '#f4f4f5', border: '1px solid #e4e4e7', 
+              padding: '0.6rem 1.25rem', borderRadius: '24px', color: '#09090b', fontSize: '0.9rem', fontWeight: 600
+            }}>
+              <Zap size={16} /> New AI Engine 2.0 Live
+            </div>
+            {profile?.subscription_status === 'active' && (
+              <div style={{ 
+                display: 'inline-flex', alignItems: 'center', gap: '0.5rem', 
+                background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)', 
+                padding: '0.6rem 1.25rem', borderRadius: '24px', color: '#10b981', fontSize: '0.9rem', fontWeight: 600,
+                marginLeft: '1rem'
+              }}>
+                <Star size={16} fill="#10b981" /> {profile.subscription_tier.toUpperCase()} PLAN ACTIVE
+              </div>
+            )}
           </div>
           <h1 className="hero-title" style={{ lineHeight: '1.1', marginBottom: '1.5rem', fontWeight: 800 }}>
             ZeroCopyright <br/>

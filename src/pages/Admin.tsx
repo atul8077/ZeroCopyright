@@ -116,7 +116,7 @@ export const Admin: React.FC = () => {
     }
   };
 
-  const handleApprove = async (id: string, userId: string) => {
+  const handleApprove = async (id: string, userId: string, planName: string) => {
     try {
       // Approve the payment
       const { error: paymentError } = await supabase
@@ -128,7 +128,7 @@ export const Admin: React.FC = () => {
 
       // Update the user's profile subscription_tier
       if (userId) {
-        await supabase.from('profiles').update({ subscription_tier: 'pro', subscription_status: 'active' }).eq('id', userId);
+        await supabase.from('profiles').update({ subscription_tier: planName.toLowerCase(), subscription_status: 'active' }).eq('id', userId);
       }
 
       setPayments(prev => prev.map(p => p.id === id ? { ...p, status: 'approved' } : p));
@@ -203,7 +203,7 @@ export const Admin: React.FC = () => {
           payments.length === 0 ? (
             <p style={{ color: 'var(--text-secondary)', textAlign: 'center', padding: '2rem 0' }}>No payments found.</p>
           ) : (
-            <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse', minWidth: '700px' }}>
+            <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse', minWidth: '100%' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid var(--card-border)' }}>
                   <th style={{ padding: '1rem 0.5rem', width: '40px' }}>
@@ -225,7 +225,7 @@ export const Admin: React.FC = () => {
                     </td>
                     <td style={{ padding: '1rem 0.5rem', color: 'var(--text-secondary)' }}>{new Date(p.created_at).toLocaleDateString()}</td>
                     <td style={{ padding: '1rem 0.5rem' }}>{p.profiles?.full_name || 'Unknown'}</td>
-                    <td style={{ padding: '1rem 0.5rem', fontFamily: 'monospace', fontSize: '1.1rem', letterSpacing: '1px' }}>{p.utr_number}</td>
+                    <td style={{ padding: '1rem 0.5rem', fontFamily: 'monospace', fontSize: '1rem', wordBreak: 'break-all' }}>{p.utr_number}</td>
                     <td style={{ padding: '1rem 0.5rem', color: 'var(--text-secondary)' }}>{p.plan}</td>
                     <td style={{ padding: '1rem 0.5rem' }}>
                       <span className={p.status === 'approved' ? 'badge badge-success' : 'badge'} style={{ background: p.status === 'pending' ? 'rgba(234, 179, 8, 0.1)' : '', color: p.status === 'pending' ? '#eab308' : '' }}>
@@ -234,7 +234,7 @@ export const Admin: React.FC = () => {
                     </td>
                     <td style={{ padding: '1rem 0.5rem', textAlign: 'right' }}>
                       {p.status === 'pending' && (
-                        <button onClick={() => handleApprove(p.id, p.user_id)} className="btn btn-primary" style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', borderRadius: '6px' }}>
+                        <button onClick={() => handleApprove(p.id, p.user_id, p.plan)} className="btn btn-primary" style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', borderRadius: '6px' }}>
                           <CheckCircle size={14} /> Approve
                         </button>
                       )}
@@ -248,7 +248,7 @@ export const Admin: React.FC = () => {
           queries.length === 0 ? (
             <p style={{ color: 'var(--text-secondary)', textAlign: 'center', padding: '2rem 0' }}>No queries found.</p>
           ) : (
-            <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse', minWidth: '700px' }}>
+            <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse', minWidth: '100%' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid var(--card-border)' }}>
                   <th style={{ padding: '1rem 0.5rem', width: '40px' }}>
